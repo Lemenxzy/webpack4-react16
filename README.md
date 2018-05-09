@@ -1,1 +1,4 @@
-# webpack4-react16
+## download this project
+
+* npm i;
+* npm run dev;

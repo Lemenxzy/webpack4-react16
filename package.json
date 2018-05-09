@@ -6,7 +6,6 @@
   "scripts": {
     "build": "npx webpack --mode production",
     "dev": "npx webpack-dev-server --mode development  --output-public-path=dist --colors",
-    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,11 +16,6 @@
     "@babel/preset-es2015": "^7.0.0-beta.44",
     "@babel/preset-react": "^7.0.0-beta.44",
     "@babel/preset-stage-0": "^7.0.0-beta.44",
-    "@storybook/addon-info": "^3.4.0",
-    "@storybook/addon-knobs": "^3.4.0",
-    "@storybook/addon-notes": "^3.4.0",
-    "@storybook/addon-options": "^3.4.0",
-    "@storybook/react": "^3.4.0",
     "babel-loader": "^8.0.0-beta.2",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",

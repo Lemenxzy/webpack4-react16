@@ -34,7 +34,7 @@ module.exports = (env,argv)=>{
     }
 
     return {
-        entry: ['babel-polyfill','./src/example/index.js'],
+        entry: ['babel-polyfill','./index.js'],
         devtool: 'cheap-module-source-map',
         devServer: {
             contentBase: './dist',
@@ -49,13 +49,16 @@ module.exports = (env,argv)=>{
                     use: {
                         loader: 'babel-loader',
                         options: {
-                            presets: ["@babel/preset-es2015","@babel/preset-stage-0","@babel/preset-react"]
+                            presets: ["@babel/preset-es2015", [require('@babel/preset-stage-2'), {
+                                useBuiltIns: true,
+                                decoratorsLegacy: true
+                            }], "@babel/preset-react"]
                         }
-                  
+                    }
+                },
                 {
                     test: /\.scss$/,
-                    exclude:path.reso  }
-        },lve(__dirname, 'node_modules'),
+                    exclude:path.resolve(__dirname, 'node_modules'),
                     use: [
                         require.resolve('style-loader'),
                         {
